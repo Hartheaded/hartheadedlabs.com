@@ -1,0 +1,149 @@
+/*
+Color Pallette
+Dark: #181C14
+Grey: #3C3D37
+Green: #697565
+Tan: #ECDFCC
+
+*/
+
+body{
+    background-image: url("assets/images/alovelybackground.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+}
+
+p {
+    margin-bottom: 100px;
+}
+
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.button{
+    color: black;
+    font-size: 2rem;
+    padding-inline: 0.5rem;
+    border-style: 5px solid;
+    border-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    border-color: white;
+    color: white;
+    background-color: black;
+    transform: scale(1.5);
+    transition-duration: 1s;
+    transition-delay: 0.05s;
+}
+
+.topbanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    z-index: 1;
+    font-style: normal;
+    text-align: center;
+    padding-left: 10rem;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    height: 100vh;
+}
+
+.myimg {
+    border: 3px solid #181C14;
+    border-radius: 8px;
+}
+
+.leftcontent {
+    padding: 1rem;
+    overflow-y: auto;
+    width: fit-content;
+    margin-bottom: 7rem;
+    margin-inline: 1rem;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    background-color: #ECDFCC;
+}
+
+.rightcontent {
+    overflow-y: auto;
+    border: solid black;
+    border-radius: 10px;
+    padding: 0rem;
+    padding-inline: 3rem;
+    background-color: #ECDFCC;
+    margin-inline: 5rem;
+    margin-bottom: 7rem;
+}
+
+
+/*
+.leftcontent, .rightcontent {
+    margin: 1vh;
+}
+
+.rightcontent {
+    padding: 1lh;
+    display: flex;
+    flex: 1;
+    background-color: #ECDFCC;
+}
+
+.leftcontent {
+    height: 98vh;
+    width: max-content;
+    display: inline-block;
+    flex-shrink: 0;
+    position:fixed;
+    left: 0;
+    top: 0;
+
+}
+
+.leftcontent div {
+    margin-bottom: 1vh;
+}
+
+.leftcontent img {
+    border-style: solid;
+    border-radius: 10px;
+}
+
+/*
+.leftcontent {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 0%;
+    left: 0;
+}
+
+.rightcontent{
+    left: 1;
+    margin-left:;
+    border-style: dashed;
+    background-color: #ECDFCC;
+}
