@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hartheaded Labs</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap"> <!--Sixtyfour Convergence Font Family-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap" rel="stylesheet">
+</head>
 
 <body>
 
@@ -14,14 +16,14 @@
         <div class="leftcontent">
             <!--Portfolio Image, Name, Subtext-->
             <div>
-                <p>
+                <p style="background-color: transparent;">
                 <img src="assets/images/me.jpg" class="myimg" alt="A picture of me!" title="me!">
-                <h1>Mason Hart</h1>
-                <p>Not just an IT support tech</p>
+                <h1 style="margin-top: -1rem;">Mason Hart</h1>
+                <sup>Not just an IT support technician</sup>
                 </p>
                 <hr>
             <!--Contact Information--> 
-                <p class="button-group">
+                <p class="button-group" style="background-color: transparent;">
                     <a href="https://www.linkedin.com/in/mason-j-hart/" target="_blank"><button class="button">
                         <i class="fa fa-linkedin" title="Connect with me on Linkedin!"></i>
                     </button></a>
@@ -34,14 +36,11 @@
                 </p>
 
             <!--Navigation-->
-            <hr>       
-                <a href="#About Me"><p>About Me</p></a>
-                <a href="#About Me"><p>About Me</p></a>
-                <a href="#About Me"><p>About Me</p></a>
-                <a href="#About Me"><p>About Me</p></a>
-                <a href="#About Me"><p>About Me</p></a>
-                <a href="#About Me"><p>About Me</p></a>
-
+            <hr style="margin-bottom: 3rem;">
+                <a href="#aboutme"><p>About Me</p></a>
+                <a href="#whoami"><p>My Work</p></a>
+                <a href="#myskills"><p>My Skills</p></a>
+                <a href="#mycerts"><p>My Certs</p></a>
             </div>
 
         </div>
@@ -51,31 +50,49 @@
             <div id="topbanner" class="topbanner">
                 <span><h1>Hartheaded Labs</h1></span>
             </div>
-                <h2>About Me</h2>
-                <div class="divcontent">
-                        <img src="assets/images/HardAtWork.jpg">
-                        <div>
-                            <p>Outside of work, I’m usually building or running something creative or technical. I run my own Dungeons & Dragons games, which means a lot of worldbuilding, problem-solving, and occasionally improvising when players derail the entire plan. I enjoy starting new projects just to see what I can turn an idea into—this website is a good example. Whether it’s something technical in my homelab or a creative project, I like figuring things out as I go and pushing myself to make it better each time.</p>
-                            <p>I’m also a bit of an audio nerd! I enjoy mixing up my setup with gear like my Schiit Vali amp and Modi DAC, along with my collection of headphones and my desktop speakers, because great sound comes in a ton of varieties. Beyond hobbies, I really value conversations on complex topics, meeting new people, and constantly challenging myself to grow. I try to stay a little competitive with who I was yesterday. I'm always learning, improving, and finding the next thing worth building. </p>
-                        </div>
-                </div>
-
-                <h2>Who am I?</h2>
+                    <h2 id="aboutme">About Me</h2>
                 <div class="divcontent">
                         <img src="assets/images/MyServer.jpg">
                         <div>
-                            <p>Outside of work, I’m usually building or running something creative or technical. I run my own Dungeons & Dragons games, which means a lot of worldbuilding, problem-solving, and occasionally improvising when players derail the entire plan. I enjoy starting new projects just to see what I can turn an idea into—this website is a good example. Whether it’s something technical in my homelab or a creative project, I like figuring things out as I go and pushing myself to make it better each time.</p>
+                            <p>I’m usually building or running something creative or technical. I run my own Dungeons & Dragons games, which means a lot of worldbuilding, problem-solving, and occasionally improvising when players derail the entire plan. I enjoy starting new projects just to see what I can turn an idea into—this website is a good example. Whether it’s something technical in my homelab or a creative project, I like figuring things out as I go and pushing myself to make it better each time.</p>
                             <p>I’m also a bit of an audio nerd! I enjoy mixing up my setup with gear like my Schiit Vali amp and Modi DAC, along with my collection of headphones and my desktop speakers, because great sound comes in a ton of varieties. Beyond hobbies, I really value conversations on complex topics, meeting new people, and constantly challenging myself to grow. I try to stay a little competitive with who I was yesterday. I'm always learning, improving, and finding the next thing worth building. </p>
                         </div>
                 </div>
 
-                <h2>My Main Skills</h2>
+                <h2 id="whoami">What About My Work?</h2>
+                <div class="divcontent">
+                        <img src="assets/images/HardAtWork.jpg">
+                        <div>
+                            <p>My career began as a server imaging technician back in 2021, where I worked closely with enterprise hardware and software before growing into an L2 technical support role with HP. I have supported large Windows 10 environments through their transition to Windows 365 and Intune. This has all required me to adapt quickly to constantly changing systems, policies, and deployment strategies. I’ve learned how to stay effective in fast-moving environments while resolving incidents efficiently and communicating clearly with both technical teams and end users. Over time, I’ve developed a reputation for being dependable, detail-oriented, and someone who can quickly adapt to new technologies and challenges. </p>
+                        </div>
+                </div>
+                <h2 id="myskills">My Skills</h2>
                 <div class="quad">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div>
+                        <h2>Virtualization & Containers</h2>
+                        <p>I keep my own personal Proxmox homelab, where I run a variety of virtual machines and Docker containers. I have experience with both KVM and LXC virtualization as well as docker containers sprinked througout. </p>
+                        <p>I host a handful of local services on my homelab including a Jellyfin home media service, network attached storage using TrueNAS to manage my movie collection, a couple of videogame servers I run for me and my friends, and I run a JuiceShop to practice and develop my web application security skills. </p>
+                    </div>
+                    <div>
+                        <h2>Automation</h2>
+                        <p>In an era of rapidly evolving technology, I understand the importance of automation in streamlining processes and improving efficiency. </p>
+                        <p>In my own homelab, I've built my own custom fan curve, it's a systemd service written in bash, to keep my server cool and most importantly QUIET! </p>
+                        <p>Using Python, I've developed a script to quickly and efficiently personalize cover letters for job applications, saving me time and allowing me to focus on researching the companies I'm applying to. </p>
+                    </div>
+                    <div>
+                        <h2>Cloud Computing</h2>
+                        <p>I have built a few labs with AWS and used it as a staging ground developing this website. I have a strong practical understanding of cloud computing including concepts and best practices.</p>
+                    </div>
+                    <div>
+                        <h2>HTML &amp; CSS</h2>
+                        <p></p>
+                    </div>
 
+                </div>
+
+                <h2 id="mycerts">My Certifications</h2>
+                <div class="quad">
+                    <img src="assets/images/CompTIA Security+ ce certificate.png" alt="CompTIA Certification">
                 </div>
 
 
