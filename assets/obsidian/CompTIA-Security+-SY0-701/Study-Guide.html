@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Study Guide</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Quartz 4"/><meta property="og:title" content="Study Guide"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Study Guide"/><meta name="twitter:description" content="Domain 1: General Security Concepts ; 12% 1.1: Compare and Contrast Various Types of Security Controls Security Control Types Preventive Proactive measures that prevent harm like a firewall Deterrent Measures that deter harm such as warning signs or visible signs of security Detective Monitor and al..."/><meta property="og:description" content="Domain 1: General Security Concepts ; 12% 1.1: Compare and Contrast Various Types of Security Controls Security Control Types Preventive Proactive measures that prevent harm like a firewall Deterrent Measures that deter harm such as warning signs or visible signs of security Detective Monitor and al..."/><meta property="og:image:alt" content="Domain 1: General Security Concepts ; 12% 1.1: Compare and Contrast Various Types of Security Controls Security Control Types Preventive Proactive measures that prevent harm like a firewall Deterrent Measures that deter harm such as warning signs or visible signs of security Detective Monitor and al..."/><meta property="twitter:domain" content="quartz.jzhao.xyz"/><meta property="og:url" content="https://quartz.jzhao.xyz/CompTIA-Security+-SY0-701/Study-Guide"/><meta property="twitter:url" content="https://quartz.jzhao.xyz/CompTIA-Security+-SY0-701/Study-Guide"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Domain 1: General Security Concepts ; 12% 1.1: Compare and Contrast Various Types of Security Controls Security Control Types Preventive Proactive measures that prevent harm like a firewall Deterrent Measures that deter harm such as warning signs or visible signs of security Detective Monitor and al..."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvemVuL0RvY3VtZW50cy9WU0NvZGUvZ2l0L3F1YXJ0ei9xdWFydHovY29tcG9uZW50cy9zdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://quartz.jzhao.xyz/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://quartz.jzhao.xyz/CompTIA-Security+-SY0-701/Study-Guide-og-image.webp"/><meta property="og:image:url" content="https://quartz.jzhao.xyz/CompTIA-Security+-SY0-701/Study-Guide-og-image.webp"/><meta name="twitter:image" content="https://quartz.jzhao.xyz/CompTIA-Security+-SY0-701/Study-Guide-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="CompTIA-Security+-SY0-701/Study-Guide"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Quartz 4</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-300" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">Study Guide</h1><p show-comma="true" class="content-meta"><time datetime="2025-08-27T21:09:26.036Z">Aug 27, 2025</time><span>12 min read</span></p></div></div><article class="popover-hint"><h1 id="domain-1-general-security-concepts--12">Domain 1: General Security Concepts ; 12%<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#domain-1-general-security-concepts--12" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="11-compare-and-contrast-various-types-of-security-controls">1.1: Compare and Contrast Various Types of Security Controls<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-compare-and-contrast-various-types-of-security-controls" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="security-control-types">Security Control Types<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#security-control-types" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Preventive
+<ul>
+<li>Proactive measures that prevent harm like a firewall</li>
+</ul>
+</li>
+<li>Deterrent
+<ul>
+<li>Measures that deter harm such as warning signs or visible signs of security</li>
+</ul>
+</li>
+<li>Detective
+<ul>
+<li>Monitor and alert malicious activity as they occur like using Intrusion detection systems</li>
+</ul>
+</li>
+<li>Corrective
+<ul>
+<li>Mitigatation of any damage and restore systems to their normal state like an incident response plan</li>
+</ul>
+</li>
+<li>Compensating
+<ul>
+<li>Back-up measures when primary security controls are not feasible or effective. If you get through a fence, you might find guards.</li>
+</ul>
+</li>
+<li>Directive
+<ul>
+<li>Set the standards for expected behavior within an organization with company policy</li>
+</ul>
+</li>
+</ul>
+<h3 id="security-control-categories">Security Control Categories<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#security-control-categories" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Technical
+<ul>
+<li>Using different hardware and software implementations that manage and reduce risk:
+<ul>
+<li>Firewalls, Antivirus, Encryption, IDS, etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Managerial
+<ul>
+<li>Strategic planning and governance:
+<ul>
+<li>Security policies, training, and incident response strategies.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Operational
+<ul>
+<li>Measures that are meant to protect data on a daily basis
+<ul>
+<li>Password policies, backup procedures, account reviews, training.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Physical
+<ul>
+<li>Real world measures taken to protect assets:
+<ul>
+<li>Locked doors, fences, gates, cameras, guards, and practices like shredding documents</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-summarize-fundamental-security-concepts">1.2 Summarize Fundamental Security Concepts<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12-summarize-fundamental-security-concepts" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>Confidentiality, Integrity, and Availability (CIA)</strong>
+<ul>
+<li>C: Protect data by being seen by unauthorized people</li>
+<li>I: Ensure that data remains accurate and unchanged from their original state</li>
+<li>A: The five 9s of availability! 99.999% uptime!</li>
+</ul>
+</li>
+<li><strong>Non-repudiation</strong>; Undeniable proof in digital communications or transactions
+<ul>
+<li>Use digital signatures! They’re practically undeniable</li>
+</ul>
+</li>
+<li><strong>Authentication, Authorization, and Accounting (AAA)</strong>
+<ul>
+<li><strong>Authentication Methods</strong>
+<ul>
+<li>Knowledge Factor: Something you know (Password)</li>
+<li>Possession Factor: Something you have (Badge/key)</li>
+<li>Inherence Factor: Something you are (Biometrics)</li>
+<li>Action Factor: Something you do (Handwriting samples, Online behavior, secret handshake)</li>
+<li>Location Factor: Somewhere you are (Work/Home)</li>
+</ul>
+</li>
+<li><strong>Authorization</strong>
+<ul>
+<li>Ensure that authorization is there for the right people, the right reasons, and the right length of time</li>
+</ul>
+</li>
+<li><strong>Accounting</strong>
+<ul>
+<li>Ensure that all activities are properly tracked and recorded
+<ul>
+<li>System login, File access, Configuration modification, Download/Installing software, unauthorized actions</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Gap analysis</strong>
+<ul>
+<li>Evaluation of the differences between an organization’s current performance, and the desired goal
+<ul>
+<li>Steps of gap analysis:
+<ul>
+<li>Define the scope</li>
+<li>Gather data on the current state</li>
+<li>Analyze the data to identify gaps</li>
+<li>Develop a plan to bridge the gap</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Zero Trust</strong>
+<ul>
+<li>The <strong>Control Plane</strong> is the logical decision factor
+<ul>
+<li>It’s the rules set by the organization</li>
+</ul>
+</li>
+<li>The <strong>Data Plane</strong> is the enforcement of the Control Plane
+<ul>
+<li>It’s the digital enforcement of rules set by the organization</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Physical Security</strong>
+<ul>
+<li>Everything from badge readers, to fences, and bollards</li>
+<li>Prevent unauthorized entities (people, vehicles) form accessing secure areas</li>
+</ul>
+</li>
+<li><strong>Deception and disruption technology</strong>
+<ul>
+<li>Have fake resources to be attacked
+<ul>
+<li>Honeypot</li>
+<li>Honeynet</li>
+<li>Honeyfile</li>
+<li>Honeytoken</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="13-explain-the-importance-of-change-management-process-and-the-impact-to-security">1.3 Explain the importance of change management process and the impact to security<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#13-explain-the-importance-of-change-management-process-and-the-impact-to-security" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><strong>Business processes impacting security operation</strong></p>
+<ul>
+<li>Approval processes
+<ul>
+<li>a formal process that ensures changes/decisions are reviewed and authorized by the appropriate people</li>
+</ul>
+</li>
+<li>Ownership
+<ul>
+<li>A change or an incident will have someone responsible for it. This is the owner</li>
+</ul>
+</li>
+<li>Stakeholders
+<ul>
+<li>A change or an incident will have people that will be affected. These are the stakeholders</li>
+</ul>
+</li>
+<li>Impact analysis
+<ul>
+<li>A change or an incident will have some kind of fallout. What is that, how does it impact daily operations, and how do we minimize that impact?</li>
+</ul>
+</li>
+<li>Test results
+<ul>
+<li>Why do a test if the results arent important?</li>
+</ul>
+</li>
+<li>Backout plan
+<ul>
+<li>Every change planned, needs a backout plan to revert changes or restore from backup</li>
+</ul>
+</li>
+<li>Maintenance Window
+<ul>
+<li>Scheduled time for maintenance</li>
+</ul>
+</li>
+<li>Standard operating procedure
+<ul>
+<li>Used to standardize operations to reduce mistakes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Technical implications</strong></p>
+<ul>
+<li>Allow/Deny lists
+<ul>
+<li>Self-explanatory</li>
+</ul>
+</li>
+<li>Restricted activities
+<ul>
+<li>Anything a given user shouldn’t be able to do</li>
+</ul>
+</li>
+<li>Downtime
+<ul>
+<li>Changes may require systems to go offline or become unusable, creating downtime</li>
+</ul>
+</li>
+<li>Service restart
+<ul>
+<li>Services are smaller components of larger applications or the operating system. Sometimes they need to be restarted in order to restore full functionality</li>
+</ul>
+</li>
+<li>Application restart
+<ul>
+<li>Ditto to service restart, but with more complicated applications</li>
+</ul>
+</li>
+<li>Legacy applications
+<ul>
+<li>applications meant for older systems and are no longer supported</li>
+</ul>
+</li>
+<li>Dependencies
+<ul>
+<li>Many applications and harwdare require <em>something</em>(typically software) in order to properly function</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Documentation</strong></p>
+<ul>
+<li>Do something? Then WRITE IT DOWN LIKE THE NEXT PERSON READING IS A COMPLETE IDIOT</li>
+</ul>
+</li>
+<li>
+<p><strong>Version Control</strong></p>
+<ul>
+<li>A system or process that tracks and manages changes made in general</li>
+<li>Sometimes version control may store older versions</li>
+</ul>
+</li>
+<li>
+<p><strong>Change Management</strong></p>
+<ul>
+<li><strong>Change Advisiory Board (CAB)</strong></li>
+<li>Every change should have a <strong>Change Owner</strong>
+<ul>
+<li>Every change will have a <strong>Stakeholder</strong>
+<ul>
+<li>Technical Stakeholders; The developers</li>
+<li>Business Stakeholders; Support team</li>
+<li>End User-based Stakeholders; The customer / user</li>
+<li>Further considerations
+<ol>
+<li>Use of Scheduled Maintenance Windows - Expected downtime</li>
+<li>Create back-out plan - Create this plan in case you need to restore</li>
+<li>Testing of Results - We need to validate the change was successful</li>
+<li>Standard operating procedures (SOP)</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Change Management Process</strong></p>
+<ol>
+<li>Preparation - Assess the current state and recognize the need for transition to change</li>
+<li>Vision for Change - Set a “North Star”</li>
+<li>Implementation</li>
+<li>Verification - Confirm new state to projected outcome</li>
+<li>Documentation (MOST IMPORTANT)</li>
+</ol>
+</li>
+</ul>
+<h2 id="14-explain-the-importance-of-using-appropriate-cryptographic-solutions">1.4 Explain the importance of using appropriate cryptographic solutions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#14-explain-the-importance-of-using-appropriate-cryptographic-solutions" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>Public Key Infrastructure (PKI)</strong>  is the set of technology and processes that make up a framework of encryption to protect and authenticate digital communications.
+<ul>
+<li><em>Public Keys</em> are given out for other people to create ciphertext that only your private key can unencrypt</li>
+<li><em>Private Keys</em> are kept secret and are used to unencrypt messages encrypted with your public key</li>
+<li><em>Key Escrow</em></li>
+</ul>
+</li>
+<li><strong>Encryption</strong> is the process of changing readable data to unreadable cipher text, typically using a unique key to change it back and forth
+<ul>
+<li><strong>Levels</strong>
+<ol>
+<li>Full-disks</li>
+<li>Partition</li>
+<li>File</li>
+<li>Volume</li>
+<li>Database</li>
+<li>Record</li>
+</ol>
+</li>
+<li><strong>Transport/Communication</strong>
+<ul>
+<li>Encryption is used in data transport across networks like SSL/TLS and on VPNs</li>
+</ul>
+</li>
+<li><strong>Symmetry</strong>
+<ul>
+<li>Asymmetric; One unique key to encrypt and one unique key to decrypt</li>
+<li>Symmetric; One unique key to encrypt and decrypt</li>
+</ul>
+</li>
+<li><strong>Key exchange</strong>
+<ul>
+<li>Key exchanges are the process of two devices/users/hosts exchanging their public cryptographic key for communications. Diffie-Hellman and it’s variants are the main way in which this is done
+- RSA is an older method</li>
+</ul>
+</li>
+<li><strong>Algorithms</strong>
+- Diffie Hellman (DH) - Used for key exchanges
+- Rivest-Shamir-Adleman (RSA)
+- Elliptic Curve Cryptography (ECC)</li>
+<li><strong>Key length</strong>
+- Just like passwords, length contributes to security</li>
+</ul>
+</li>
+<li><strong>Tools</strong>
+<ul>
+<li>Trusted Platform Module (TPM) - An internal chip used to store keys and used for disk encryption and secure boot</li>
+<li>Hardware Security Module (HSM) - A dedicated PC part/Rack mounted appliance that is used to conduct cryptographic operations</li>
+<li>Key Management System
+<ul>
+<li>Like a password manager, but for cryptographic keys</li>
+<li>AWS and Azure have their own key vaults, for example</li>
+</ul>
+</li>
+<li>Secure Enclave
+<ul>
+<li>A protected part of the CPU designed to store sensitive information in isolation from the main system</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Obfuscation</strong>
+<ul>
+<li>Steganography
+<ul>
+<li>The practice of concealing data</li>
+</ul>
+</li>
+<li>Tokenization
+<ul>
+<li>Use a useless stand in as the identifier for something</li>
+<li>For example a password: Password123 <span>→</span> QwV4RteD29Glpw</li>
+</ul>
+</li>
+<li>Data Masking
+<ul>
+<li>Visually blocking part of data. You can identify it, but not know the entire thing</li>
+<li>Receipts mask your credit card details except for the last 4 digits to identify it</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Hashing</strong>
+<ul>
+<li>Hashes are identifiers for data</li>
+<li>A fingerprint identifies a person; A hash identifies data</li>
+<li>Hashes should ideally be wildly different even with a bit-worth of difference</li>
+</ul>
+</li>
+<li><strong>Salting</strong>
+<ul>
+<li>Salting is for further obfuscation of data that helps protect against rainbow table attacks</li>
+<li>You input the data, typically a password for salting, and the system creates a salt that is added to your input to create a totally different hash than if you were to only input your data</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Password</th><th>Salt</th><th>Hash</th></tr></thead><tbody><tr><td>Password123</td><td>Xy7!a</td><td>A1B2C3D4E5F6…</td></tr><tr><td>Password123</td><td>Mq9#z</td><td>F6E5D4C3B2A1…</td></tr></tbody></table></div>
+<ul>
+<li><strong>Digital Signatures</strong>
+<ul>
+<li>Digital signatures are used to verify what was sent is not only accurate, but sent from the expected person</li>
+<li>To create one, you take the sent data and hash it. From there, you use your private key to encrypt the hash for transit.</li>
+<li>To verify a signature, you hash the received data, then you decrypt the signature with the sender’s public key to receive a hash, then finally you compare the two hashes.</li>
+</ul>
+</li>
+<li><strong>Key Stretching</strong>
+<ul>
+<li>Key stretching is the act of applying a hashing algorithm multiple times to make it much harder to crack (computationally speaking)</li>
+</ul>
+</li>
+<li><strong>Blockchain</strong>
+<ul>
+<li>the blockchain is an open ledger that is hosted all across the internet. This ledger tracks and records all activities happening. Most typical uses of a blockchain are for cryptocurrencies and NFTs</li>
+</ul>
+</li>
+<li><strong>Open Public Ledger</strong>
+<ul>
+<li>The broader umbrella term for things like blockchains</li>
+</ul>
+</li>
+<li><strong>Certificates</strong>
+<ul>
+<li>Certificates are typically created from trusted sources, Certificate authorities, that are used to create trust. If you trust the CA, you trust the certificate</li>
+<li>Certficate Authorities - Are the generally trusted vendors that give out certificates to online services. Their business model is being trusted to verify online services/websites so that bad actors have a harder time tricking others.</li>
+<li>Certificate Revocation Lists - List of certificates that lose validity before their expected expiration date</li>
+<li>Online Certificate status Protocol (OCSP)</li>
+<li>Self-Signed - Certificates can be signed by yourself, but that doesn’t immediately mean that it’s something to be trusted.</li>
+<li>Third-Party - The usual defacto way to get your websites and other online services verified. These third parties are generally trusted to verify who you say you are</li>
+<li>Root of trust - the highest level of trust in a certificate. Could be you if you self-sign, could be a certificate authority otherwise.</li>
+<li>Certificate Signing Request (CSR) generation - A request sent to a certificate authority to receive a certificate</li>
+<li>Wildcard - Blanket certificate for subdomains
+<ul>
+<li><em><span class="text-highlight">example</span></em>.google.com</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="domain-2-threats-vulnerabilities-and-mitigations--22">Domain 2: Threats, Vulnerabilities, and Mitigations ; 22%<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#domain-2-threats-vulnerabilities-and-mitigations--22" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="21-compare-and-contrast-common-threat-actors-and-motivations">2.1 Compare and contrast common threat actors and motivations.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-compare-and-contrast-common-threat-actors-and-motivations" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>Threat Actors</strong>
+<ol>
+<li>Nation-state
+<ol>
+<li>Governments V Governments/Organizations/Individuals</li>
+</ol>
+</li>
+<li>Unskilled attackers
+<ol>
+<li>Script kiddies looking to win big or to learn</li>
+</ol>
+</li>
+<li>Hactivist
+<ol>
+<li>Individual/Small group with some political gumption behind their attacks</li>
+</ol>
+</li>
+<li>Insider threat
+<ol>
+<li>Employees; Typically out of frustration/anger towards the organization, or are financially incentivized by another Threat Actor</li>
+</ol>
+</li>
+<li>Organized crime
+<ol>
+<li>Criminal organizations of various sizes looking to make some money from doing work for another Threat Actor, or by other methods such as extortion or selling data/backdoors</li>
+</ol>
+</li>
+<li>Shadow IT
+<ol>
+<li>(typically) An unauthorized insider threat(s) that preforms the tasks on the behalf of IT. Changing cube setups, holding inventory, support, etc.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong>Attributes of actors</strong>
+<ul>
+<li>Internal/External
+<ul>
+<li>Inside versus outside</li>
+</ul>
+</li>
+<li>Resources/funding
+<ul>
+<li>The higher resources an actor has, the more weight they can pull in attacks</li>
+</ul>
+</li>
+<li>Level of sophistication/capability
+<ul>
+<li>Script kiddies versus seasoned hackers. How good are you?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Motivations</strong>
+<ul>
+<li>Data exfiltration</li>
+<li>Espionage</li>
+<li>Service disruption</li>
+<li>Blackmail</li>
+<li>Financial Gain</li>
+<li>Philosophical/political beliefs</li>
+<li>Ethical - White Hat</li>
+<li>Revenge</li>
+<li>Disruption/chaos</li>
+<li>War</li>
+</ul>
+</li>
+</ul>
+<h2 id="22-explain-common-threat-vectors-and-attack-surfaces">2.2 Explain common threat vectors and attack surfaces.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22-explain-common-threat-vectors-and-attack-surfaces" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Message-based
+<ul>
+<li>Messaging is the quickest way to send an attack to a user. These are often fairly open platforms where you can upload images, phishing links, and even automatic execution of code.</li>
+<li>Email</li>
+<li>Short Message Service (SMS)</li>
+<li>Instant Messaging (IM)</li>
+</ul>
+</li>
+<li>Image-based
+<ul>
+<li>Images can have embedded code that executes on the host when it is viewed</li>
+</ul>
+</li>
+<li>File-based
+<ul>
+<li>Same with images, but more common. PDFs are the most infectable file types</li>
+</ul>
+</li>
+<li>Voice call
+<ul>
+<li>You can easily pretend to be someone that could be expected to call to retrieve information or for the listener to preform actions through social engineering
+<ul>
+<li>A customer seeking support</li>
+<li>Someone interested in buying property</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removable device
+<ul>
+<li>USB drives that auto execute code when plugged in.</li>
+<li>Can extend to anything removable. You can make a headset shaped thumb drive essentially</li>
+</ul>
+</li>
+<li>Vulnerable software
+<ul>
+<li>Can be infected with malware, or can be exploited if using unsecure protocols</li>
+</ul>
+</li>
+<li>Unsupported systems and applications
+<ul>
+<li>No mo’ support! No mo’ updates! Gives you a lot of time to come up with <em>something</em></li>
+</ul>
+</li>
+<li>Unsecure networks
+<ul>
+<li>Open communications to be listened to</li>
+</ul>
+</li>
+<li>Open service ports
+<ul>
+<li>Any port that is open is a hole poked through your security.</li>
+</ul>
+</li>
+<li>Default credentials
+<ul>
+<li>There are dictionaries full of default credentials</li>
+</ul>
+</li>
+<li>Supply chains
+<ul>
+<li>Supply chains are made of many different organizations. One weak link can cause some massive damage to the entire chain if effected</li>
+<li>Managed service Providers (MSPs)
+<ul>
+<li>You are giving your trust to a third party organization with their own list of potential threat actors</li>
+</ul>
+</li>
+<li>Vendors
+<ul>
+<li>Vendors sell fully assembled products that can be tampered with before the sale</li>
+</ul>
+</li>
+<li>Suppliers
+<ul>
+<li>There can be many people selling the same chip. Some of those suppliers sell chips that are intentionally made to be vulnerable</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Human vectors/social engineering
+<ul>
+<li>Phishing
+<ul>
+<li>Trick someone to reveal sensitive information</li>
+</ul>
+</li>
+<li>Vishing
+<ul>
+<li>Phishing over the phone</li>
+</ul>
+</li>
+<li>Smshing
+<ul>
+<li>Phishing over text</li>
+</ul>
+</li>
+<li>Misinformation/disinformation
+<ul>
+<li>Influence voting results with fake news</li>
+</ul>
+</li>
+<li>Impersonation
+<ul>
+<li>You will trust and bow before authority figures such as your boss</li>
+</ul>
+</li>
+<li>Business email compromise
+<ul>
+<li>A good way to gain some validity to your impersonation</li>
+</ul>
+</li>
+<li>Pretexting
+<ul>
+<li>Create a fabricated scenario or story that helps sell validity to what you’re asking</li>
+</ul>
+</li>
+<li>Watering hole
+<ul>
+<li>A resource/website where many entities go to use on the daily</li>
+<li>Infect facebook to attack Wells Fargo</li>
+</ul>
+</li>
+<li>Brand impersonation
+<ul>
+<li>You won a cocacola branded limo! click here to learn more!</li>
+</ul>
+</li>
+<li>Typosquatting
+<ul>
+<li>Misspelled URL domains that relies on someone mis-typing the website URL</li>
+<li>Remember <code>csgolounge.co</code> versus <code>csgolounge.com</code> ?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="23-explain-various-types-of-vulnerabilities">2.3 Explain various types of vulnerabilities.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#23-explain-various-types-of-vulnerabilities" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="24-given-a-scenario-analyze-indicators-of-malicious-activity">2.4 Given a scenario, analyze indicators of malicious activity.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#24-given-a-scenario-analyze-indicators-of-malicious-activity" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="25-explain-the-purpose-of-mitigation-techniques-used-to-secure-the-enterprise">2.5 Explain the purpose of mitigation techniques used to secure the enterprise.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#25-explain-the-purpose-of-mitigation-techniques-used-to-secure-the-enterprise" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h1 id="domain-3-security-architecture--18">Domain 3: Security Architecture ; 18%<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#domain-3-security-architecture--18" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="31-compare-and-contrast-security-implications-of-different-architecture-models">3.1 Compare and contrast security implications of different architecture models.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-compare-and-contrast-security-implications-of-different-architecture-models" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="32-given-a-scenario-apply-security-principles-to-secure-enterprise-infrastructure">3.2 Given a scenario, apply security principles to secure enterprise infrastructure.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-given-a-scenario-apply-security-principles-to-secure-enterprise-infrastructure" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="33-compare-and-contrast-concepts-and-strategies-to-protect-data">3.3 Compare and contrast concepts and strategies to protect data.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#33-compare-and-contrast-concepts-and-strategies-to-protect-data" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="34-explain-the-importance-of-resilience-and-recovery-in-security-architecture">3.4 Explain the importance of resilience and recovery in security architecture.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#34-explain-the-importance-of-resilience-and-recovery-in-security-architecture" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h1 id="domain-4-security-operations--28">Domain 4: Security Operations ; 28%<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#domain-4-security-operations--28" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="41-given-a-scenario-apply-common-security-techniques-to-computing-resources">4.1 Given a scenario, apply common security techniques to computing resources.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#41-given-a-scenario-apply-common-security-techniques-to-computing-resources" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="42-explain-the-security-implications-of-proper-hardware-software-and-data-asset-management">4.2 Explain the security implications of proper hardware, software, and data asset management.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#42-explain-the-security-implications-of-proper-hardware-software-and-data-asset-management" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="43-explain-various-activities-associated-with-vulnerability-management">4.3 Explain various activities associated with vulnerability management.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#43-explain-various-activities-associated-with-vulnerability-management" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="44-explain-security-alerting-and-monitoring-concepts-and-tools">4.4 Explain security alerting and monitoring concepts and tools.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#44-explain-security-alerting-and-monitoring-concepts-and-tools" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="45-given-a-scenario-modify-enterprise-capabilities-to-enhance-security">4.5 Given a scenario, modify enterprise capabilities to enhance security.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#45-given-a-scenario-modify-enterprise-capabilities-to-enhance-security" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="46-given-a-scenario-implement-and-maintain-identity-and-access-management">4.6 Given a scenario, implement and maintain identity and access management.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#46-given-a-scenario-implement-and-maintain-identity-and-access-management" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="47-explain-the-importance-of-automation-and-orchestration-related-to-secure-operations">4.7 Explain the importance of automation and orchestration related to secure operations.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#47-explain-the-importance-of-automation-and-orchestration-related-to-secure-operations" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="48-explain-appropriate-incident-response-activities">4.8 Explain appropriate incident response activities.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#48-explain-appropriate-incident-response-activities" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="49-given-a-scenario-use-data-sources-to-support-an-investigation">4.9 Given a scenario, use data sources to support an investigation.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#49-given-a-scenario-use-data-sources-to-support-an-investigation" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h1 id="domain-5-security-program-management-and-oversight--20">Domain 5: Security Program Management and Oversight ; 20%<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#domain-5-security-program-management-and-oversight--20" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="51-summarize-elements-of-effective-security-governance">5.1 Summarize elements of effective security governance.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#51-summarize-elements-of-effective-security-governance" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="52-explain-elements-of-the-risk-management-process">5.2 Explain elements of the risk management process.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#52-explain-elements-of-the-risk-management-process" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="53-explain-the-processes-associated-with-third-party-risk-assessment-and-management">5.3 Explain the processes associated with third-party risk assessment and management.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#53-explain-the-processes-associated-with-third-party-risk-assessment-and-management" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="54-summarize-elements-of-effective-security-compliance">5.4 Summarize elements of effective security compliance.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#54-summarize-elements-of-effective-security-compliance" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="55-explain-types-and-purposes-of-audits-and-assessments">5.5 Explain types and purposes of audits and assessments.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#55-explain-types-and-purposes-of-audits-and-assessments" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="56-given-a-scenario-implement-security-awareness-practices">5.6 Given a scenario, implement security awareness practices.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#56-given-a-scenario-implement-security-awareness-practices" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-140" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#domain-1-general-security-concepts--12" data-for="domain-1-general-security-concepts--12">Domain 1: General Security Concepts ; 12%</a></li><li class="depth-1"><a href="#11-compare-and-contrast-various-types-of-security-controls" data-for="11-compare-and-contrast-various-types-of-security-controls">1.1: Compare and Contrast Various Types of Security Controls</a></li><li class="depth-2"><a href="#security-control-types" data-for="security-control-types">Security Control Types</a></li><li class="depth-2"><a href="#security-control-categories" data-for="security-control-categories">Security Control Categories</a></li><li class="depth-1"><a href="#12-summarize-fundamental-security-concepts" data-for="12-summarize-fundamental-security-concepts">1.2 Summarize Fundamental Security Concepts</a></li><li class="depth-1"><a href="#13-explain-the-importance-of-change-management-process-and-the-impact-to-security" data-for="13-explain-the-importance-of-change-management-process-and-the-impact-to-security">1.3 Explain the importance of change management process and the impact to security</a></li><li class="depth-1"><a href="#14-explain-the-importance-of-using-appropriate-cryptographic-solutions" data-for="14-explain-the-importance-of-using-appropriate-cryptographic-solutions">1.4 Explain the importance of using appropriate cryptographic solutions</a></li><li class="depth-0"><a href="#domain-2-threats-vulnerabilities-and-mitigations--22" data-for="domain-2-threats-vulnerabilities-and-mitigations--22">Domain 2: Threats, Vulnerabilities, and Mitigations ; 22%</a></li><li class="depth-1"><a href="#21-compare-and-contrast-common-threat-actors-and-motivations" data-for="21-compare-and-contrast-common-threat-actors-and-motivations">2.1 Compare and contrast common threat actors and motivations.</a></li><li class="depth-1"><a href="#22-explain-common-threat-vectors-and-attack-surfaces" data-for="22-explain-common-threat-vectors-and-attack-surfaces">2.2 Explain common threat vectors and attack surfaces.</a></li><li class="depth-1"><a href="#23-explain-various-types-of-vulnerabilities" data-for="23-explain-various-types-of-vulnerabilities">2.3 Explain various types of vulnerabilities.</a></li><li class="depth-1"><a href="#24-given-a-scenario-analyze-indicators-of-malicious-activity" data-for="24-given-a-scenario-analyze-indicators-of-malicious-activity">2.4 Given a scenario, analyze indicators of malicious activity.</a></li><li class="depth-1"><a href="#25-explain-the-purpose-of-mitigation-techniques-used-to-secure-the-enterprise" data-for="25-explain-the-purpose-of-mitigation-techniques-used-to-secure-the-enterprise">2.5 Explain the purpose of mitigation techniques used to secure the enterprise.</a></li><li class="depth-0"><a href="#domain-3-security-architecture--18" data-for="domain-3-security-architecture--18">Domain 3: Security Architecture ; 18%</a></li><li class="depth-1"><a href="#31-compare-and-contrast-security-implications-of-different-architecture-models" data-for="31-compare-and-contrast-security-implications-of-different-architecture-models">3.1 Compare and contrast security implications of different architecture models.</a></li><li class="depth-1"><a href="#32-given-a-scenario-apply-security-principles-to-secure-enterprise-infrastructure" data-for="32-given-a-scenario-apply-security-principles-to-secure-enterprise-infrastructure">3.2 Given a scenario, apply security principles to secure enterprise infrastructure.</a></li><li class="depth-1"><a href="#33-compare-and-contrast-concepts-and-strategies-to-protect-data" data-for="33-compare-and-contrast-concepts-and-strategies-to-protect-data">3.3 Compare and contrast concepts and strategies to protect data.</a></li><li class="depth-1"><a href="#34-explain-the-importance-of-resilience-and-recovery-in-security-architecture" data-for="34-explain-the-importance-of-resilience-and-recovery-in-security-architecture">3.4 Explain the importance of resilience and recovery in security architecture.</a></li><li class="depth-0"><a href="#domain-4-security-operations--28" data-for="domain-4-security-operations--28">Domain 4: Security Operations ; 28%</a></li><li class="depth-1"><a href="#41-given-a-scenario-apply-common-security-techniques-to-computing-resources" data-for="41-given-a-scenario-apply-common-security-techniques-to-computing-resources">4.1 Given a scenario, apply common security techniques to computing resources.</a></li><li class="depth-1"><a href="#42-explain-the-security-implications-of-proper-hardware-software-and-data-asset-management" data-for="42-explain-the-security-implications-of-proper-hardware-software-and-data-asset-management">4.2 Explain the security implications of proper hardware, software, and data asset management.</a></li><li class="depth-1"><a href="#43-explain-various-activities-associated-with-vulnerability-management" data-for="43-explain-various-activities-associated-with-vulnerability-management">4.3 Explain various activities associated with vulnerability management.</a></li><li class="depth-1"><a href="#44-explain-security-alerting-and-monitoring-concepts-and-tools" data-for="44-explain-security-alerting-and-monitoring-concepts-and-tools">4.4 Explain security alerting and monitoring concepts and tools.</a></li><li class="depth-1"><a href="#45-given-a-scenario-modify-enterprise-capabilities-to-enhance-security" data-for="45-given-a-scenario-modify-enterprise-capabilities-to-enhance-security">4.5 Given a scenario, modify enterprise capabilities to enhance security.</a></li><li class="depth-1"><a href="#46-given-a-scenario-implement-and-maintain-identity-and-access-management" data-for="46-given-a-scenario-implement-and-maintain-identity-and-access-management">4.6 Given a scenario, implement and maintain identity and access management.</a></li><li class="depth-1"><a href="#47-explain-the-importance-of-automation-and-orchestration-related-to-secure-operations" data-for="47-explain-the-importance-of-automation-and-orchestration-related-to-secure-operations">4.7 Explain the importance of automation and orchestration related to secure operations.</a></li><li class="depth-1"><a href="#48-explain-appropriate-incident-response-activities" data-for="48-explain-appropriate-incident-response-activities">4.8 Explain appropriate incident response activities.</a></li><li class="depth-1"><a href="#49-given-a-scenario-use-data-sources-to-support-an-investigation" data-for="49-given-a-scenario-use-data-sources-to-support-an-investigation">4.9 Given a scenario, use data sources to support an investigation.</a></li><li class="depth-0"><a href="#domain-5-security-program-management-and-oversight--20" data-for="domain-5-security-program-management-and-oversight--20">Domain 5: Security Program Management and Oversight ; 20%</a></li><li class="depth-1"><a href="#51-summarize-elements-of-effective-security-governance" data-for="51-summarize-elements-of-effective-security-governance">5.1 Summarize elements of effective security governance.</a></li><li class="depth-1"><a href="#52-explain-elements-of-the-risk-management-process" data-for="52-explain-elements-of-the-risk-management-process">5.2 Explain elements of the risk management process.</a></li><li class="depth-1"><a href="#53-explain-the-processes-associated-with-third-party-risk-assessment-and-management" data-for="53-explain-the-processes-associated-with-third-party-risk-assessment-and-management">5.3 Explain the processes associated with third-party risk assessment and management.</a></li><li class="depth-1"><a href="#54-summarize-elements-of-effective-security-compliance" data-for="54-summarize-elements-of-effective-security-compliance">5.4 Summarize elements of effective security compliance.</a></li><li class="depth-1"><a href="#55-explain-types-and-purposes-of-audits-and-assessments" data-for="55-explain-types-and-purposes-of-audits-and-assessments">5.5 Explain types and purposes of audits and assessments.</a></li><li class="depth-1"><a href="#56-given-a-scenario-implement-security-awareness-practices" data-for="56-given-a-scenario-implement-security-awareness-practices">5.6 Given a scenario, implement security awareness practices.</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="../postscript.js" type="module" data-persist="true"></script></html>
