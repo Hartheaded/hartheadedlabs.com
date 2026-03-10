@@ -81,12 +81,18 @@ body{
 }
 
 .button:hover {
-    border-color: var(--clr-surface-tonal-a0);
-    color: var(--clr-surface-a0);
     background-color: var(--clr-primary-a40);
+    border-radius: 10px;
     transform: scale(1.5);
-    transition-duration: 1s;
-    transition-delay: 0.05s;
+    transition-duration: 0.5s;
+    text-decoration-color: var(--clr-surface-a20);
+
+    
+}
+
+.button:active {
+    background-color: var(--clr-primary-a0);
+    transition-duration: 0s;
 }
 
 /*Page Layout*/
@@ -149,9 +155,12 @@ body{
     border-radius: 8px;
 }
 
-.leftcontent p:hover, .leftcontent a:hover{
-    background-color: var(--clr-primary-a20);
+.leftcontent-jump p:hover{
     color: var(--clr-surface-a20);
+    background-color: var(--clr-primary-a20);
+    text-decoration-line: underline;
+    text-decoration-color: var(--clr-surface-a20);
+
 }
 
 .leftcontent p:active, .leftcontent a:active{
