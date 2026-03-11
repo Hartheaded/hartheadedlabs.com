@@ -73,7 +73,7 @@ body {
     color: var(--clr-surface-tonal-a0);
     background-color: var(--clr-primary-a0);
     border-color: var(--clr-surface-tonal-a0);
-    font-size: 2rem;
+    font-size: 2vw;
     padding-inline: 0.5rem;
     border-style: solid;
     border-radius: 10px;
@@ -122,14 +122,14 @@ body {
     height: 99vh;
     border-style: solid;
     border-color: var(--clr-surface-tonal-a0);
+    overflow-y: scroll;
 }
-
 
 .leftcontent p,
 .leftcontent h1{
     font-family: "Rakkas", serif;
     font-weight: 400;
-    font-size: 2vh;
+    font-size: x-large;
     margin: 1rem;
 }
 
@@ -140,8 +140,8 @@ body {
 }
 
 .leftcontent sup {
-    font-size: 1vh;
-    margin-top: -1rem;
+    font-size:xx-small;
+    margin-top: -1.5rem;
     color: var(--clr-surface-a10);
 }
 
