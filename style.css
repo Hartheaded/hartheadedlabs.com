@@ -115,29 +115,33 @@ body {
 
 /*LEFT PANEL*/
 .leftcontent {
-    padding-inline: 1rem;
     margin: 0 auto;
     background-color: var(--clr-surface-tonal-a30);
     width: fit-content;
     min-height: fit-content;
-    height: auto;
+    height: 99vh;
     border-style: solid;
     border-color: var(--clr-surface-tonal-a0);
 }
 
 
 .leftcontent p,
-.leftcontent h1,
-.leftcontent sup {
+.leftcontent h1{
     font-family: "Rakkas", serif;
     font-weight: 400;
+    font-size: 2vh;
+    margin: 1rem;
+}
+
+.leftcontent sup, .leftcontent p, .leftcontent h1 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .leftcontent sup {
-    margin-top: -2rem;
+    font-size: 1vh;
+    margin-top: -1rem;
     color: var(--clr-surface-a10);
 }
 
