@@ -216,7 +216,7 @@ body {
 
 .divcontent p {
     text-indent: 2rem;
-    font-size: 1.5vh;
+    font-size: 1.25vw;
     color: var(--clr-surface-a0);
     padding-inline: 1rem;
     max-width: fit-content;
@@ -237,6 +237,7 @@ body {
     margin: 1rem;
     margin-bottom: 20rem;
     grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
 
 }
 
@@ -259,6 +260,7 @@ body {
 .quad p {
     color: var(--clr-surface-a0);
     padding-inline: 1rem;
+    font-size: 1.25vw;
 
 }
 
