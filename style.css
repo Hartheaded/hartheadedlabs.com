@@ -74,7 +74,6 @@ body {
     background-color: var(--clr-primary-a0);
     border-color: var(--clr-surface-tonal-a0);
     font-size: 2vw;
-    padding-inline: 0.5rem;
     border-style: solid;
     border-radius: 10px;
     cursor: pointer;
@@ -104,6 +103,7 @@ body {
 
 .myimg {
     border: 3px solid var(--clr-surface-tonal-a0);
+    width: 10vw;
     border-radius: 8px;
 }
 
