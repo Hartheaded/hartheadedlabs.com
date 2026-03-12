@@ -85,8 +85,6 @@ body {
     transform: scale(1.5);
     transition-duration: 0.5s;
     text-decoration-color: var(--clr-surface-a20);
-
-
 }
 
 .button:active {
