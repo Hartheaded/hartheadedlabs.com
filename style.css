@@ -73,7 +73,7 @@ body {
     color: var(--clr-surface-tonal-a0);
     background-color: var(--clr-primary-a0);
     border-color: var(--clr-surface-tonal-a0);
-    font-size: 2vw;
+    font-size: 1.1vw;
     border-style: solid;
     border-radius: 10px;
     cursor: pointer;
@@ -104,6 +104,7 @@ body {
 .myimg {
     border: 3px solid var(--clr-surface-tonal-a0);
     width: 10vw;
+    max-width: 250px;
     border-radius: 8px;
 }
 
@@ -173,12 +174,12 @@ body {
 .topbanner {
     font-family: "Rubik Glitch", system-ui;
     font-weight: 400;
-    font-size: 2vh;
+    font-size: 2vw;
     z-index: 1;
     font-style: normal;
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
     color: var(--clr-primary-a0);
     -webkit-text-stroke: 1px #000000;
 }
@@ -208,9 +209,8 @@ body {
 }
 
 .divcontent div {
-    max-height: 400px;
-    margin-right: 1rem;
-    overflow: auto;
+    height: fit-content;
+    overflow-y: auto;
     background-color: var(--clr-surface-tonal-a40);
     border-style: solid;
     border-color: var(--clr-surface-tonal-a50);
@@ -223,7 +223,6 @@ body {
     font-size: 1.25vw;
     color: var(--clr-surface-a0);
     padding-inline: 1rem;
-    max-width: fit-content;
 }
 
 .divcontent img {
