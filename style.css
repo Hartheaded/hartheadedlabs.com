@@ -104,6 +104,7 @@ body {
     width: 10vw;
     max-width: 250px;
     border-radius: 8px;
+    transform:rotatey(180deg);
 }
 
 
@@ -183,7 +184,8 @@ body {
 }
 
 .rightcontent {
-    max-width: 1920px;
+    max-width: 75vw;
+    padding: 5vw;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -197,7 +199,6 @@ body {
     font-style: normal;
     display: flex;
     justify-content: center;
-    place-items: center;
 }
 
 .divcontent {
@@ -218,13 +219,13 @@ body {
 
 .divcontent p {
     text-indent: 2rem;
-    font-size: 1.25vw;
+    font-size: 2rem;
     color: var(--clr-surface-a0);
     padding-inline: 1rem;
 }
 
 .divcontent img {
-    height: 400px;
+    width: 10vw;
     border-style: solid;
     border-color: var(--clr-surface-a50);
     border-radius: 8px;
@@ -237,6 +238,7 @@ body {
     display: grid;
     margin: 1rem;
     margin-bottom: 20rem;
+    justify-content: center;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
 
@@ -255,18 +257,18 @@ body {
     background-color: var(--clr-surface-tonal-a20);
     border-radius: 8px;
     margin-top: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
 }
 
 .quad p {
     color: var(--clr-surface-a0);
     padding-inline: 1rem;
-    font-size: 1.25vw;
+    font-size: 2rem;
 
 }
 
 .quad img {
-    max-width: 100vh;
+    max-width: 750px;
     border-radius: 8px;
-    margin: 1rem auto;
+    margin: 1rem;
 }
